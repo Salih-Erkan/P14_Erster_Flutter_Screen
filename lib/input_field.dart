@@ -25,6 +25,7 @@ class InputField extends StatelessWidget {
           obscureText: obscureText,
           decoration: InputDecoration(
             hintText: hintText,
+            hintStyle: const TextStyle(fontSize: 14),
             suffixIcon: suffixIcon,
             filled: true,
             fillColor: Colors.white,

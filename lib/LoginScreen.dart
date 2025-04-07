@@ -1,10 +1,15 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:login/input_field.dart';
+import 'package:login/social_button.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2BA78B),
+      backgroundColor: const Color.fromARGB(255, 53, 159, 138),
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -13,6 +18,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const SizedBox(height: 62),
                 const Text(
                   'Hi, Welcome Back!',
                   style: TextStyle(
@@ -21,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 32),
+                const SizedBox(height: 62),
                 const InputField(label: 'Email', hintText: 'example@gmail.com'),
                 const SizedBox(height: 16),
                 const InputField(
@@ -48,7 +54,12 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {},
                       child: const Text(
                         'Forgot Password?',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
+                        ),
                       ),
                     ),
                   ],
@@ -66,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                     child: const Text('Einloggen'),
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 44),
                 Row(
                   children: const [
                     Expanded(child: Divider(color: Colors.white)),
@@ -91,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                   text: 'Login with Google',
                   outlined: true,
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 84),
                 RichText(
                   text: const TextSpan(
                     text: "Don’t have an account ? ",
